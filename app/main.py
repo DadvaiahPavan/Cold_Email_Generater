@@ -52,13 +52,13 @@ def get_groq_api_key():
     # Method 1: Environment variable
     api_key = os.getenv('GROQ_API_KEY')
     if api_key:
-        st.info("GROQ API Key loaded successfully from environment")
+        st.info("")
         return api_key
     
     # Method 2: Streamlit secrets
     try:
         api_key = st.secrets["GROQ_API_KEY"]
-        st.info("GROQ API Key loaded from Streamlit secrets")
+        st.info("")
         return api_key
     except Exception as e:
         st.error(f"Could not load GROQ API Key: {e}")
